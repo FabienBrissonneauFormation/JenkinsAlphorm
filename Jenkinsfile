@@ -4,6 +4,7 @@ pipeline {
         stage('Build'){
             steps {
                 echo 'Build en cours ...'
+                sh 'ecrire.sh'
             }
         }
         stage('Test'){
