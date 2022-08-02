@@ -4,7 +4,7 @@ pipeline {
         stage('Build'){
             steps {
                 echo 'Build en cours ...'
-                
+                sh('chmod +x ./ecrire.sh')
                 sh ('./ecrire.sh')
             }
         }
