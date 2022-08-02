@@ -22,8 +22,9 @@ pipeline {
         stage('Deploy'){
             steps {
                 echo 'Deploy en cours ...'
-                dir("${env.WORKSPACE}/")
-                sh ('./ecrire.sh')
+                dir("${env.WORKSPACE}") {
+                    sh ('./ecrire.sh')
+                }
             }
         }
     }
